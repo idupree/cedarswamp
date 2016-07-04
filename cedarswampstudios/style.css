@@ -10,14 +10,14 @@ abbr[title]{border-bottom:dotted 1px;}
 
 html, body {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   color: #000;
   border: 0;
   margin: 0;
   padding: 0;
   font-family: "Times New Roman", "Times", serif;
 }
-body {
+#box {
   background-image: url("./snowscape.jpg");
   background-size: cover;
   background-position: center top;
@@ -36,12 +36,15 @@ h1 { color: hsl(24, 58%, 17%); }
 img {
   border-style: none;
 }
+#box {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
 
 .project {
   display: block;
   padding: 1em;
-  width: 100%;
-  height: 100%;
   box-sizing: border-box;
   font-size: 1.33em;
   text-align: center;
@@ -86,7 +89,7 @@ img {
 }
 #head {
   text-align: center;
-  xbackground-color: hsla(0, 100%, 95%, 0.5);
+  flex: 0 0 auto;
 }
 #head h1 {
   font-size: 2em;
@@ -95,71 +98,15 @@ img {
   box-sizing: border-box;
   height: 100px;
   background-image: linear-gradient(to bottom, hsla(240, 15%, 89%, 1) 0%, hsla(240, 15%, 89%, 0.9) 80%, hsla(240, 15%, 89%, 0.7) 86%, hsla(240, 15%, 89%, 0.4) 93%, transparent 100%);
-  xbackground-image: linear-gradient(to bottom, hsla(240, 15%, 89%, 1) 0%, rgba(255,255,255,0.8) 100%);
-  xbox-shadow:
-    0 0 10px 10px rgba(255, 255, 255, 0.8);
 }
 #head p, #head h2 {
   display: none;
 }
-.projects {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100% - 100px);
-}
-#swampland {
-  xbackground-color: hsla(220, 100%, 90%, 0.9);
-}
-#sculpture {
-  xbackground-color: hsla(120, 100%, 83%, 0.9);
-}
-.project {
+.projectbox {
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-@media (min-width: 10000px) {
-div.projects {
-  margin-right: 700px;
-  min-height: 456px;
-}
-#head {
-  background-image: url("./Drive.jpg");
-  height: 456px;
-  width: 700px;
-  float: right;
-  position: relative;
-}
-#head p {
-  display: block;
-  position: absolute;
-  top: 29px;
-  left: 120px;
-  margin: 0;
-  font-size: 1.33em;
-}
-#head h1 {
-  position: absolute;
-  display: block;
-  top: 76px;
-  left: 30px;
-  margin: 0;
-  height: auto;
-  font-size: 2em;
-  font-weight: bold;
-}
-#head h2 {
-  position: absolute;
-  display: block;
-  top: 143px;
-  left: 50px;
-  margin: 0;
-  width: 300px;
-  font-size: 1em;
-  text-align: center;
-  font-weight: bold;
-}
 }
 #swampland {
   text-decoration: none;
@@ -176,22 +123,4 @@ div.projects {
 }
 #sculpture img {
   display: none;
-}
-
-
-
-#swampland {
-  xbackground-color: hsla(220, 100%, 90%, 0.9);
-}
-#sculpture {
-  xbackground-color: hsla(120, 100%, 83%, 0.9);
-}
-#songs {
-  xbackground-color: hsla(320, 100%, 90%, 0.9);
-}
-#pillager {
-  xbackground-color: hsla(60, 100%, 77%, 0.9);
-}
-#idupree {
-  xbackground-color: hsla(210, 50%, 87%, 0.9);
 }
