@@ -10,12 +10,17 @@ abbr[title]{border-bottom:dotted 1px;}
 
 html, body {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   color: #000;
   background-color: #5d5;
   border: 0;
   margin: 0;
   padding: 0;
+  background-image: url("./snowscape.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: hsla(240, 100%, 97%, 1.0);
 
   font-family: "Times New Roman", "Times", serif;
 }
@@ -37,23 +42,55 @@ img {
   font-size: 1.33em;
   text-align: center;
   cursor: pointer;
+  text-shadow: #fff 0 0 10px;
 }
-a.project:hover,  a.project:focus {
+.project p, .project h2, .project h3 {
+  box-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    10px 0 15px #fff,
+    -10px 0 15px #fff,
+    20px 10px 20px #fff,
+    -20px -10px 15px #fff,
+    5px -5px 5px #fff,
+    -5px 5px 5px #fff;
+  background-color: #fff;
+  border-radius: 45px;
+}
+.project:hover p, .project:hover h2, .project:hover h3,
+.project:focus p, .project:focus h2, .project:focus h3 {
+  box-shadow:
+    30px 20px 20px #fff,
+    -30px -20px 20px #fff,
+    40px 0px 20px #fff,
+    -40px 0px 20px #fff,
+    30px -20px 20px #fff,
+    -30px 20px 20px #fff;
+}
+#body a.project:hover, #body  a.project:focus {
   background-color: rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 0 10px 10px rgba(255, 255, 255, 0.8);
 }
-a.project:active {
+#body a.project:active {
   background-color: rgba(192, 192, 192, 0.8);
+  box-shadow:
+    0 0 10px 10px rgba(192, 192, 192, 0.8);
 }
 #head {
   text-align: center;
-  background-color: #ffe4e4;
+  xbackground-color: hsla(0, 100%, 95%, 0.5);
 }
 #head h1 {
   font-size: 2em;
   font-weight: bold;
-  padding: 1em 0;
+  padding: 0.83em 0 1em;
   box-sizing: border-box;
   height: 100px;
+  background-image: linear-gradient(to bottom, hsla(240, 100%, 97%, 1.0) 0%, hsla(240, 100%, 97%, 0.9) 80%, hsla(240, 100%, 97%, 0.7) 86%, hsla(240, 100%, 97%, 0.4) 93%, transparent 100%);
+  xbackground-image: linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0.8) 100%);
+  xbox-shadow:
+    0 0 10px 10px rgba(255, 255, 255, 0.8);
 }
 #head p, #head h2 {
   display: none;
@@ -63,13 +100,19 @@ a.project:active {
   flex-direction: column;
   min-height: calc(100% - 100px);
 }
+#swampland {
+  xbackground-color: hsla(220, 100%, 90%, 0.9);
+}
+#sculpture {
+  xbackground-color: hsla(120, 100%, 83%, 0.9);
+}
 .project {
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-@media (min-width: 1000px) {
+@media (min-width: 10000px) {
 div.projects {
   margin-right: 700px;
   min-height: 456px;
@@ -112,33 +155,36 @@ div.projects {
 }
 }
 #swampland {
-  background-color: #cdf;
-}
-#swampland {
   text-decoration: none;
 }
-#swampland h1 {
+#swampland h2 {
   text-decoration: underline;
 }
-#swampland h2, #swampland p {
+#swampland h3, #swampland p {
   color: #000;
 }
 #webdesign {
   background-color: #fcc;
   display: none;
 }
-#sculpture {
-  background-color: #afa;
-}
 #sculpture img {
   display: none;
 }
+
+
+
+#swampland {
+  xbackground-color: hsla(220, 100%, 90%, 0.9);
+}
+#sculpture {
+  xbackground-color: hsla(120, 100%, 83%, 0.9);
+}
 #songs {
-  background-color: #fce;
+  xbackground-color: hsla(320, 100%, 90%, 0.9);
 }
 #pillager {
-  background-color: #ff8;
+  xbackground-color: hsla(60, 100%, 77%, 0.9);
 }
 #idupree {
-  background-color: #cde;
+  xbackground-color: hsla(210, 50%, 87%, 0.9);
 }
