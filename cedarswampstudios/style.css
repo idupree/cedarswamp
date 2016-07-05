@@ -28,7 +28,6 @@ html, body {
 :link { color: #0000EE; }
 :visited { color: #551A8B; }
 
-h1 { color: hsl(24, 58%, 17%); }
 :link { color: hsl(203, 20%, 24%); }
 :visited { color: hsl(24, 58%, 25%); }
 
@@ -77,30 +76,18 @@ img {
     -30px 20px 20px hsla(240, 15%, 100%, 1);
   background-color: hsla(240, 15%, 100%, 1);
 }
-#body a.project:hover, #body  a.project:focus {
-  xbackground-color: rgba(255, 255, 255, 0.8);
-  xbox-shadow:
-    0 0 10px 10px rgba(255, 255, 255, 0.8);
-}
-#body a.project:active {
-  xbackground-color: rgba(192, 192, 192, 0.8);
-  xbox-shadow:
-    0 0 10px 10px rgba(192, 192, 192, 0.8);
-}
 #head {
   text-align: center;
   flex: 0 0 auto;
+  padding-bottom: 2.7em;
+  color: hsl(24, 58%, 17%);
+  background-image: linear-gradient(to bottom, hsla(240, 15%, 89%, 1) 0%, hsla(240, 15%, 89%, 0.9) 80%, hsla(240, 15%, 89%, 0.7) 86%, hsla(240, 15%, 89%, 0.4) 93%, transparent 100%);
 }
 #head h1 {
   font-size: 2em;
   font-weight: bold;
-  padding: 0.83em 0 1em;
+  padding: 0.62em 0 0.25em;
   box-sizing: border-box;
-  height: 100px;
-  background-image: linear-gradient(to bottom, hsla(240, 15%, 89%, 1) 0%, hsla(240, 15%, 89%, 0.9) 80%, hsla(240, 15%, 89%, 0.7) 86%, hsla(240, 15%, 89%, 0.4) 93%, transparent 100%);
-}
-#head p, #head h2 {
-  display: none;
 }
 .projectbox {
   flex: 1 1 auto;
@@ -116,10 +103,6 @@ img {
 }
 #swampland h3, #swampland p {
   color: hsl(24, 18%, 5%);
-}
-#webdesign {
-  background-color: #fcc;
-  display: none;
 }
 #sculpture img {
   display: none;
